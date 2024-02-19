@@ -10,6 +10,23 @@
             #gangRule{
                 color: rgba(255, 255, 255, 0.750);
             }
+            menua{
+                color: rgba(255, 255, 255, 0.750);
+                outline: auto;
+            }
+            menub{
+                color: white;
+            }
+            #gangRole{
+                display: none;
+            }
+            .gangRole{
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                width: 50%;
+                font-size: 2rem;
+            }
         </style>
     </head>
     <body>
@@ -20,9 +37,8 @@
             <div>
                 <h1>Black Monkey Gang</h1>
             </div>
-            <div></div>
         </div>
-
+        <div class="menu"><menua>主页</menua>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/document/d/1-kmrX4NS0tG5xrhmzoJJFYzdlrIvQESq0dLsqnJfCZ0/edit"><menub>黑猴档</menub></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.sites.google.com/student.hci.edu.sg/xinheihoubang/主页"><menub>黑猴匠</menub></a></div>
         <div id="gangRule">
             <h2>黑猴帮四法则</h2>
             <div>第一法则：咱们黑猴帮，要打得鸦雀无声，永不啪啪响！</div>
@@ -31,7 +47,21 @@
             <div>第四法则：咱们黑猴帮，要打就一定要打得落花流水！</div>
         </div>
 
-        <div><a href="https://docs.google.com/document/d/1-kmrX4NS0tG5xrhmzoJJFYzdlrIvQESq0dLsqnJfCZ0/edit"><img src="https://i.ibb.co/VH6fspj/gangSign.png"></a></div>
+        <br>
+        <br>
+
+        <div class="gangRole">
+            <img id="gangSign" onclick="showGangRoles()" src="gangSign.png">
+            <div id="gangRole" onclick="showGangRoles()">
+                Gang General: 黑猴将-朱痕 <br>
+                Gang Leader: 黑猴长-般亚 <br>
+                Gang Young man: 黑猴朗- 升C 小调 <br>
+                Gang Monk: 黑猴尚-善灵 <br>
+                Gang Woman: 黑猴娘-般亚 <br>
+                Gang Website: 黑猴网-达咚 <br>
+                Gang Mechanic: 黑猴匠-诺兰 <br>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
