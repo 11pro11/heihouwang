@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body{
                 text-align: center;
@@ -63,6 +65,23 @@
             </div>
         </div>
 
-        <script src="script.js"></script>
+        <script src="script.js">
+            var gangRoleShow = false
+            function showGangRoles() {
+                console.log('showGangRoles activated')
+                if (gangRoleShow === false) {
+                    document.getElementById('gangSign').style.display = 'none';
+                    document.getElementById('gangRole').style.display = 'inline';
+                    gangRoleShow = true;
+                    console.log('gangrole has been shown')
+                }
+                else {
+                    document.getElementById('gangSign').style.display = 'inline';
+                    document.getElementById('gangRole').style.display = 'none';
+                    gangRoleShow = false;
+                    console.log('gangrole has been hidden')
+                }
+            }
+        </script>
     </body>
 </html>
