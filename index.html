@@ -29,6 +29,15 @@
                 width: 50%;
                 font-size: 2rem;
             }
+            .gangSoupDesc{
+                color: rgba(255, 255, 255, 0.750);
+            }
+            .heihoutang{
+                font-size: 2rem;
+            }
+            #recipe{
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -65,8 +74,26 @@
             </div>
         </div>
 
+        <br><br>
+
+        <div class="heihoutang"><div onclick="heihoutangrecipe()">
+        <div>黑猴汤</div>
+        <div class="gangSoupDesc">每只黑猴必学的黑猴汤，真的黑猴香！</div></div>
+
+        <div id="recipe">
+            往锅里加一些白开水，再加入黑猴姜、黑猴桑<br>
+            小火慢炖，熬15分钟<br>
+            加入生黑猴羊、黑猴鲳，黑猴鲿，再熬60分钟<br>
+            把火加大<br>
+            加入少量黑猴糖，黑猴酱，以及味精，再熬15分钟<br>
+            把汤盛到碗里，黑猴香！！！<br>
+        </div>
+
+        </div>
+
         <script>
             var gangRoleShow = false
+            var gangSoupRecipeShow = false
             function showGangRoles() {
                 console.log('showGangRoles activated')
                 if (gangRoleShow === false) {
@@ -80,6 +107,19 @@
                     document.getElementById('gangRole').style.display = 'none';
                     gangRoleShow = false;
                     console.log('gangrole has been hidden')
+                }
+            }
+            function heihoutangrecipe() {
+                console.log('recipe function activated')
+                if (gangSoupRecipeShow === false) {
+                    document.getElementById('recipe').style.display = 'inline';
+                    console.log('recipe shown');
+                    gangSoupRecipeShow = true;
+                }
+                else {
+                    document.getElementById('recipe').style.display = 'none';
+                    console.log('recipe hidden');
+                    gangSoupRecipeShow = false;
                 }
             }
         </script>
