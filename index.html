@@ -12,6 +12,14 @@
             #gangRule{
                 color: rgba(255, 255, 255, 0.750);
             }
+            #gangCheer{
+                color: rgba(255, 255, 255, 0.750);
+                display: none;
+            }
+            #gangAnthem{
+                color: rgba(255, 255, 255, 0.750);
+                display: none;
+            }
             menua{
                 color: rgba(255, 255, 255, 0.750);
                 outline: auto;
@@ -50,16 +58,23 @@
             </div>
         </div>
         <div class="menu"><menua>主页</menua>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/document/d/1-kmrX4NS0tG5xrhmzoJJFYzdlrIvQESq0dLsqnJfCZ0/edit"><menub>黑猴档</menub></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.sites.google.com/student.hci.edu.sg/xinheihoubang/主页"><menub>新黑猴档</menub></a></div>
-        <div id="gangRule">
+        <div id="gangRule" onclick="gangRuleCheerAnthem()">
             <h2>黑猴帮四法则</h2>
             <div>第一法则：咱们黑猴帮，要打得鸦雀无声，永不啪啪响！</div>
             <div>第二法则：咱们黑猴帮，要打得精准，每分钟准准一百二十拍，不多一拍，不少一拍；不快一拍，不慢一拍！</div>
             <div>第三法则：咱们黑猴帮，永不拖延，说现在打就现在打！</div>
             <div>第四法则：咱们黑猴帮，要打就一定要打得落花流水！</div>
         </div>
+        <div id="gangCheer" onclick="gangRuleCheerAnthem()">
+            <h2>黑猴嚷</h2>
+            <div>东西南北谁最棒？黑后黑猴帮最棒！</div>
+        </div>
+        <div id="gangAnthem" onclick="gangRuleCheerAnthem()">
+            <h2>黑猴进行曲</h2>
+            <div>待定</div>
+        </div>
 
-        <br>
-        <br>
+        <br><br>
 
         <div class="gangRole">
             <img id="gangSign" onclick="showGangRoles()" src="gangSign.png">
@@ -95,8 +110,30 @@
         <h1>~这里什么都没有~</h1>
 
         <script>
+            var ruleCheerAnthem = 0
             var gangRoleShow = false
             var gangSoupRecipeShow = false
+            function gangRuleCheerAnthem() {
+                console.log('ruleCheerAnthem activated')
+                if (ruleCheerAnthem === 0) {
+                    document.getElementById('gangRule').style.display = 'none';
+                    document.getElementById('gangCheer').style.display = 'inline';
+                    ruleCheerAnthem = 1;
+                    console.log('ruleCHEERanthem')
+                }
+                else if (ruleCheerAnthem === 1) {
+                    document.getElementById('gangCheer').style.display = 'none';
+                    document.getElementById('gangAnthem').style.display = 'inline';
+                    ruleCheerAnthem = 2;
+                    console.log('rulecheerANTHEM')
+                }
+                else{
+                    document.getElementById('gangAnthem').style.display = 'none';
+                    document.getElementById('gangRule').style.display = 'inline';
+                    ruleCheerAnthem = 0;
+                    console.log('RULEcheeranthem')
+                }
+            }
             function showGangRoles() {
                 console.log('showGangRoles activated')
                 if (gangRoleShow === false) {
